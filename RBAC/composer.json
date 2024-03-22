@@ -1,0 +1,17 @@
+{
+    "name": "seguranca/rbac",
+    "autoload": {
+        "psr-4": {
+            "Seguranca\\Rbac\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jo1oPedro",
+            "email": "joao.pedreira@estudante.ufjf.br"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*"
+    }
+}
