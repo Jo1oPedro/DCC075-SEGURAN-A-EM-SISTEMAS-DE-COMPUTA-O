@@ -1,0 +1,15 @@
+{
+    "name": "php/caesar-cipher",
+    "autoload": {
+        "psr-4": {
+            "Php\\CaesarCipher\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jo1oPedro",
+            "email": "joao.pedreira@estudante.ufjf.br"
+        }
+    ],
+    "require": {}
+}
