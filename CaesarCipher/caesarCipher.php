@@ -27,6 +27,8 @@ foreach($lettersFrequency as $key => $letterFrequency) {
     $lettersFrequency[$key] = $letterFrequency / $phraseLenght;
 }
 
-var_dump($);
+echo "Frequencia de Letras: " . PHP_EOL;
+var_dump($lettersFrequency);
 
 
+echo PHP_EOL . "Frase criptografa: " . $newPhrase;
