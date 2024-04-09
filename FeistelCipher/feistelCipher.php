@@ -37,17 +37,16 @@ function feistel_encrypt(int $plaintext, array $keys, array $s_box): int {
     return ($left << 32) | $right;
 }
 
-// Example usage
-$plaintext = 0x0123456789ABCDEF;
+$text = 0x0123456789ABCDEF;
 $keys = [
     0x00000000, 0x11111111, 0x22222222, 0x33333333, 0x44444444, 0x55555555, 0x66666666,
     0x77777777, 0x88888888, 0x99999999, 0xAAAAAAAA, 0xBBBBBBBB, 0xCCCCCCCC, 0xDDDDDDDD,
     0xEEEEEEEE, 0xFFFFFFFF,
 ];
 
-$ciphertext = feistel_encrypt($plaintext, $keys, S_BOX);
+$ciphertext = feistel_encrypt($text, $keys, S_BOX);
 
-printf("Plaintext: %016X\n", $plaintext);
+printf("Text: %016X\n", $text);
 printf("Ciphertext: %016X\n", $ciphertext);
 
 ?>
