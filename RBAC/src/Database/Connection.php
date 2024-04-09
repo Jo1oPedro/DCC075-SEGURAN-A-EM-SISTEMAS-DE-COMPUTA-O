@@ -10,7 +10,7 @@ class Connection
     public static function getConnection(): \PDO
     {
         if(is_null(self::$pdo)) {
-            self::$pdo = new \PDO('mysql:host=localhost;dbname=test', 'root', '');
+            self::$pdo = new \PDO('mysql:host=banco_de_dados_relacional;dbname=rbac', 'user', 'secret');
         }
         return self::$pdo;
     }

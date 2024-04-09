@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+
+  # mysql
+  banco_de_dados_relacional:
+    image: mysql:latest
+    ports:
+      - '3306:3306'
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_DATABASE: "rbac"
+    volumes:
+      - ./backup_banco_de_dados_relacional/database:/var/lib/mysql
+
+  rbac:
+    container_name: missing-pets-api-1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        PHP_VERSION: '8.3.3-bullseye'
+    volumes:
+      - .:/var/www/app/
+    ports:
+      - "8000:8000"
