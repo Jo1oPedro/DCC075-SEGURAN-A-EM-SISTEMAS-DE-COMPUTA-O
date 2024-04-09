@@ -21,7 +21,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 WORKDIR $APP_DIR
 RUN cd $APP_DIR
 RUN chown www-data:www-data $APP_DIR
-COPY --chown=www-data:www-data . .
+COPY --chown=www-data:www-data ./code .
 
 RUN composer install --no-interaction
 

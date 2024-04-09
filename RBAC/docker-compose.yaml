@@ -16,13 +16,12 @@ services:
       - ./backup_banco_de_dados_relacional/database:/var/lib/mysql
 
   rbac:
-    container_name: missing-pets-api-1
     build:
       context: .
       dockerfile: ./Dockerfile
       args:
         PHP_VERSION: '8.3.3-bullseye'
     volumes:
-      - .:/var/www/app/
+      - ./code/:/var/www/app/
     ports:
       - "8000:8000"
