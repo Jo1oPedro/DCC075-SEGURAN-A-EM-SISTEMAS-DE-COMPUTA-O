@@ -1,7 +1,7 @@
 <?php
 
 // Função para gerar um número pseudoaleatório
-function geradorNumeroAleatorio($seed, $m) {
+function geradorNumeroAleatorio(int $seed, int $m) {
 
     $xn = pow($seed, 2) % $m;
     $xn1 = pow($xn, 2) % $m;
@@ -29,7 +29,11 @@ if (($p % 4 != 3) || ($q % 4 != 3)) {
 $seed = rand(1, $m - 1);
 
 // Exemplo de uso
-for ($i = 0; $i < 10; $i++) {
-    $randomBit = geradorNumeroAleatorio($seed, $m);
-    echo $randomBit . " ";
-}
+
+$randomBit = geradorNumeroAleatorio($seed, $m);
+echo "p: {$p}" . PHP_EOL;
+echo "q: {$q}" . PHP_EOL;
+echo "seed: {$seed}" . PHP_EOL;
+echo "Randombit: {$randomBit}" . PHP_EOL;
+echo "bitstring: " . decbin($randomBit);
+
