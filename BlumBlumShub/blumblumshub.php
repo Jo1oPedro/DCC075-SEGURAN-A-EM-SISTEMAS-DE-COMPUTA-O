@@ -9,9 +9,6 @@ function geradorNumeroAleatorio(int $seed, int $m) {
     // Extrair o bit de paridade como saída
     $parityBit = $xn1 ^ $xn;
 
-    // Atualizar a semente para a próxima iteração
-    $seed = $xn1;
-
     return $parityBit;
 }
 
