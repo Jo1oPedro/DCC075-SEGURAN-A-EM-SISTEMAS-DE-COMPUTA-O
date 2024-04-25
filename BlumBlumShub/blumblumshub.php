@@ -28,8 +28,6 @@ if (($p % 4 != 3) || ($q % 4 != 3)) {
 // Definir a semente inicial
 $seed = rand(1, $m - 1);
 
-// Exemplo de uso
-
 $randomBit = geradorNumeroAleatorio($seed, $m);
 echo "p: {$p}" . PHP_EOL;
 echo "q: {$q}" . PHP_EOL;
